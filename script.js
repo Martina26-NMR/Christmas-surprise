@@ -13,8 +13,8 @@ form.addEventListener("submit", function (e) {
   userName.textContent = data.name;
   tree.classList.remove("hidden");
 
- 
-  fetch("https://formsubmit.co/ajax/George.safwat.saadallah@gmail.com", {
+//  George.safwat.saadallah@gmail.com
+  fetch("https://formsubmit.co/ajax/", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

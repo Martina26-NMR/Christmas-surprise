@@ -10,6 +10,7 @@ body {
   margin: auto;
   padding: 40px 20px;
   text-align: center;
+    position: relative;
 }
 
 h1 {
@@ -69,27 +70,53 @@ small {
 .tree-svg {
   width: 100%;
   max-width: 320px;
-  fill: #0a8f4d;
+  fill: #0a8f4d; 
+
 }
 
-.tree-layer {
-  fill: #0b8f4d;
-}
+.tree-layer { fill: #0b8f4d; }
+.trunk { fill: #6b3e26; rx: 5; }
 
-.trunk {
-  fill: #6b3e26;
-}
 
 .star {
   fill: gold;
-  filter: drop-shadow(0 0 10px gold);
+  filter: drop-shadow(0 0 15px gold);
   animation: starPulse 2s infinite;
+  transform-origin: center center;
+
+
 }
 
+.star-small { fill: #ffd166; filter: drop-shadow(0 0 6px #ffd166); animation: starGlow 2s infinite; }
+
 @keyframes starPulse {
-  0% { opacity: 0.7; }
+  0% { opacity: 0.7; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.2); }
+  100% { opacity: 0.7; transform: scale(1); }
+}
+
+@keyframes starGlow {
+  0% { opacity: 0.5; }
   50% { opacity: 1; }
-  100% { opacity: 0.7; }
+  100% { opacity: 0.5; }
+}
+
+
+.light {
+  animation: blink 1.5s infinite alternate;
+  transform-origin: center center;
+}
+
+.red { fill: #ff4d4d; }
+.yellow { fill: #ffd166; }
+.blue { fill: #4dabf7; }
+.pink { fill: #f783ac; }
+.green { fill: #51cf66; }
+
+@keyframes blink {
+  0% { opacity: 0.3; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+  100% { opacity: 0.3; transform: scale(0.8); }
 }
 
 #userName {
@@ -100,29 +127,34 @@ small {
   animation: nameGlow 2s infinite;
 }
 
+
 @keyframes nameGlow {
   0% { filter: drop-shadow(0 0 6px #ffd166); }
-  50% { filter: drop-shadow(0 0 18px #ffd166); }
+  50% { filter: drop-shadow(0 0 20px #ffd166); }
   100% { filter: drop-shadow(0 0 6px #ffd166); }
 }
 
-.light {
-  animation: blink 1.6s infinite alternate;
+
+.year {
+  fill: #fffa65;
+  font-size: 20px;
+  font-weight: bold;
+  filter: drop-shadow(0 0 10px #fffa65);
+  animation: yearGlow 2s infinite alternate;
 }
 
-.red { fill: #ff4d4d; }
-.yellow { fill: #ffd166; }
-.blue { fill: #4dabf7; }
-.pink { fill: #f783ac; }
-.green { fill: #51cf66; }
-
-@keyframes blink {
-  0% { opacity: 0.4; }
-  100% { opacity: 1; }
+@keyframes yearGlow {
+  0% { filter: drop-shadow(0 0 5px #fffa65); }
+  50% { filter: drop-shadow(0 0 15px #fffa65); }
+  100% { filter: drop-shadow(0 0 5px #fffa65); }
 }
+
 
 @media (max-width: 480px) {
-  #userName {
-    font-size: 18px;
-  }
+  #userName { font-size: 18px; }
+  .year { font-size: 16px; }
 }
+
+
+
+

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8" />   
   <title>Christmas Surprise 🎄</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -29,35 +29,46 @@
       </small>
     </form>
 
-    <div id="tree" class="hidden">
-<svg viewBox="0 0 300 420" class="tree-svg">
+    <div id="tree" class="hidden ">
+      <svg viewBox="0 0 300 420" class="tree-svg">
 
-    <!-- Star -->
-    <polygon
-      points="150,20 160,45 190,45 165,65 175,95 150,75 125,95 135,65 110,45 140,45"
-      class="star"
-    />
+        <!-- Tree Layers -->
+        <polygon points="150,50 40,200 260,200" class="tree-layer" />
+        <polygon points="150,130 50,300 250,300" class="tree-layer" />
+        <polygon points="150,210 40,380 260,380" class="tree-layer" />
 
-    <!-- Tree Layers -->
-    <polygon points="150,60 60,180 240,180" class="tree-layer" />
-    <polygon points="150,140 50,280 250,280" class="tree-layer" />
-    <polygon points="150,220 40,360 260,360" class="tree-layer" />
+        <!-- Trunk -->
+        <rect x="130" y="380" width="40" height="40" class="trunk" />
 
-    <!-- Lights -->
-    <circle cx="120" cy="160" r="4" class="light red" />
-    <circle cx="180" cy="160" r="4" class="light yellow" />
-    <circle cx="100" cy="220" r="4" class="light blue" />
-    <circle cx="200" cy="220" r="4" class="light pink" />
-    <circle cx="150" cy="260" r="4" class="light green" />
-    <circle cx="80" cy="300" r="4" class="light red" />
-    <circle cx="220" cy="300" r="4" class="light yellow" />
+        <!-- Lights -->
+        <circle cx="100" cy="120" r="5" class="light red" />
+        <circle cx="180" cy="120" r="5" class="light yellow" />
+        <circle cx="60" cy="200" r="5" class="light blue" />
+        <circle cx="220" cy="200" r="5" class="light pink" />
+        <circle cx="140" cy="250" r="5" class="light green" />
+        <circle cx="80" cy="320" r="5" class="light red" />
+        <circle cx="200" cy="320" r="5" class="light yellow" />
 
-    <!-- Name -->
-    <text x="150" y="210" text-anchor="middle" id="userName"></text>
+        <!-- Extra Decorations -->
+        <circle cx="120" cy="150" r="3" class="light pink" />
+        <circle cx="180" cy="200" r="3" class="light blue" />
+        <polygon points="140,180 145,190 155,190 148,198 150,208 142,200 134,208 136,198 129,190 139,190" class="star-small yellow"/>
 
-    <!-- Trunk -->
-    <rect x="130" y="360" width="40" height="40" class="trunk" />
-  </svg>
+        <!-- Name -->
+        <text x="150" y="240" text-anchor="middle" id="userName"></text>
+
+        <!-- Year 2026 -->
+        <text x="150" y="300" text-anchor="middle" class="year">2026</text>
+        <!-- Company Name -->
+<text x="150" y="270" text-anchor="middle" id="companyName"></text>
+
+
+        <!-- Star in front -->
+        <polygon
+          points="150,10 160,35 190,35 165,55 175,85 150,65 125,85 135,55 110,35 140,35"
+          class="star"
+        />
+      </svg>
     </div>
 
   </div>
