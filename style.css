@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #0b1d26, #102a3a);
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+}
+
+.container {
+  max-width: 400px;
+  margin: auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 30px;
+}
+
+input, button {
+  box-sizing: border-box;
+}
+
+form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: none;
+}
+
+form button {
+  width: 100%;
+  padding: 12px;
+  background: #e63946;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #ff4d5a;
+}
+
+small {
+  display: block;
+  margin-top: 10px;
+  font-size: 11px;
+  opacity: 0.6;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes glow {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
+
+.tree-svg {
+  width: 100%;
+  max-width: 320px;
+  fill: #0a8f4d;
+}
+
+.tree-layer {
+  fill: #0b8f4d;
+}
+
+.trunk {
+  fill: #6b3e26;
+}
+
+.star {
+  fill: gold;
+  filter: drop-shadow(0 0 10px gold);
+  animation: starPulse 2s infinite;
+}
+
+@keyframes starPulse {
+  0% { opacity: 0.7; }
+  50% { opacity: 1; }
+  100% { opacity: 0.7; }
+}
+
+#userName {
+  fill: #ffd166;
+  font-size: 20px;
+  font-weight: bold;
+  filter: drop-shadow(0 0 12px #ffd166);
+  animation: nameGlow 2s infinite;
+}
+
+@keyframes nameGlow {
+  0% { filter: drop-shadow(0 0 6px #ffd166); }
+  50% { filter: drop-shadow(0 0 18px #ffd166); }
+  100% { filter: drop-shadow(0 0 6px #ffd166); }
+}
+
+.light {
+  animation: blink 1.6s infinite alternate;
+}
+
+.red { fill: #ff4d4d; }
+.yellow { fill: #ffd166; }
+.blue { fill: #4dabf7; }
+.pink { fill: #f783ac; }
+.green { fill: #51cf66; }
+
+@keyframes blink {
+  0% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+@media (max-width: 480px) {
+  #userName {
+    font-size: 18px;
+  }
+}

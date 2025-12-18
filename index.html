@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Christmas Surprise 🎄</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+
+    <h1>🎄 Christmas Surprise</h1>
+    <p class="subtitle">
+      Enter your name to see it magically appear on our Christmas Tree ✨
+    </p>
+
+    <form id="userForm">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="tel" name="phone" placeholder="Phone Number" required />
+      <input type="email" name="email" placeholder="Email Address" required />
+      <input type="text" name="company" placeholder="Company Name" required />
+
+      <button type="submit">
+        Show My Christmas Surprise 🎁
+      </button>
+
+      <small>
+        By submitting, you agree to share your information.
+      </small>
+    </form>
+
+    <div id="tree" class="hidden">
+<svg viewBox="0 0 300 420" class="tree-svg">
+
+    <!-- Star -->
+    <polygon
+      points="150,20 160,45 190,45 165,65 175,95 150,75 125,95 135,65 110,45 140,45"
+      class="star"
+    />
+
+    <!-- Tree Layers -->
+    <polygon points="150,60 60,180 240,180" class="tree-layer" />
+    <polygon points="150,140 50,280 250,280" class="tree-layer" />
+    <polygon points="150,220 40,360 260,360" class="tree-layer" />
+
+    <!-- Lights -->
+    <circle cx="120" cy="160" r="4" class="light red" />
+    <circle cx="180" cy="160" r="4" class="light yellow" />
+    <circle cx="100" cy="220" r="4" class="light blue" />
+    <circle cx="200" cy="220" r="4" class="light pink" />
+    <circle cx="150" cy="260" r="4" class="light green" />
+    <circle cx="80" cy="300" r="4" class="light red" />
+    <circle cx="220" cy="300" r="4" class="light yellow" />
+
+    <!-- Name -->
+    <text x="150" y="210" text-anchor="middle" id="userName"></text>
+
+    <!-- Trunk -->
+    <rect x="130" y="360" width="40" height="40" class="trunk" />
+  </svg>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
